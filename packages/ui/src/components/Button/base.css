@@ -1,0 +1,24 @@
+.ey-btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.ey-btn--default {
+  background-color: #fff;
+  color: #000;
+}
+
+.ey-btn--outlined {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.ey-btn--text {
+  background-color: transparent;
+  border: none;
+  color: #000;
+}
