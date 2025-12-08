@@ -1,0 +1,43 @@
+.ey-radio-group {
+  display: flex;
+  gap:10px;
+  .ey-radio-group__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.ey-radio-group--horizontal {
+  flex-direction: row;
+}
+
+.ey-radio-group--vertical {
+  flex-direction: column;
+}
+
+// outlined
+.ey-radio-group--outlined {
+  .ey-radio-group__item {
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 4px 8px;
+    transition: border-color 0.3s ease; // 添加过渡效果
+    
+    // 当内部的 radio 被选中时，改变边框颜色
+    &:has(input[type="radio"]:checked) {
+      border-color: #409eff;
+    }
+
+  }
+}
+
+// card
+.ey-radio-group--card {
+  .ey-radio-group__item {
+    border-radius: 5px;
+    color:#fff;
+    background-color:#409eff;
+    padding: 4px 8px;
+  }
+}

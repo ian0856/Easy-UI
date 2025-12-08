@@ -1,0 +1,17 @@
+.ey-checkbox {
+  display: flex;
+  gap: 10px;
+  .ey-checkbox__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.ey-checkbox--horizontal {
+  flex-direction: row;
+}
+
+.ey-checkbox--vertical {
+  flex-direction: column;
+}

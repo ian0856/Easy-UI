@@ -7,7 +7,7 @@
 
 /* 去除 button 和 input 元素的默认边框 */
 button,
-input {
+input:not([type="radio"]):not([type="checkbox"]) {
   border: none;
   outline: none;
   /* 去除浏览器默认外观 */

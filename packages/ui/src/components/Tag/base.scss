@@ -9,21 +9,4 @@
 
   align-items: center;
   justify-content: center;
-  &__close {
-    margin-left: 8px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    font-size: 12px;
-    line-height: 15px;
-    border: 1px solid #409eff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      cursor: pointer;
-      background-color: #409eff;
-      color: #fff;
-    }
-  }
 }

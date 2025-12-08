@@ -1,10 +1,8 @@
 import { OptionItem } from "../../types/OptionItem"
 import { Direction } from "../../types/layout"
 
-type RadioVariant = 'default' | 'outlined' | 'card'
-export interface RadioProps {
+export interface CheckboxProps {
   value: string
   options: OptionItem[]
   direction: Direction
-  variant?: RadioVariant
 }

@@ -7,7 +7,6 @@
     <Variant title="Default">
       <div class="flex gap-20px">
         <EyTag text="Default" />
-        <EyTag text="Default" closable />
       </div>
     </Variant>
   </Story>

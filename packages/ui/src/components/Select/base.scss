@@ -1,0 +1,13 @@
+.ey-select {
+  &__content {
+    color: #000;
+    width: 220px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    padding: 0 10px;
+    &:focus {
+      border: 1px solid #409eff;
+    }
+  }
+}

@@ -21,7 +21,6 @@ export const EyTag = defineComponent({
           <div class="ey-tag__content">
             {props.text}
           </div>
-          {props.closable && <div class="ey-tag__close">x</div>}
         </div>
       )
     }
