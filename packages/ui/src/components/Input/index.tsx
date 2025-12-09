@@ -1,6 +1,7 @@
 import { PropType, defineComponent } from "vue";
 import { InputProps } from "./types";
 import './base.scss';
+import { useVModel } from "@vueuse/core";
 
 export const EyInput = defineComponent({
   name: 'EyInput',
@@ -30,7 +31,17 @@ export const EyInput = defineComponent({
       default: false
     }
   },
-  setup(props, { slots }) {
+  emits: {
+    'update:modelValue': (value: string) => true,
+    'input': (value: string) => true
+  },
+  setup(props, { slots, emit }) {
+    const handleInput = (e: Event) => {
+      const value = (e.target as HTMLInputElement).value;
+      emit('update:modelValue', value);
+      emit('input', value);
+    };
+    const value = useVModel(props, 'value', emit);
     return () => {
       return (
         <div class={`ey-input ey-input--${props.variant} flex items-center`}>
@@ -39,7 +50,8 @@ export const EyInput = defineComponent({
           </div>
           <input
           class={`ey-input__content ${props.clearable ? 'ey-input__content--clearable' : ''}`}
-          value={props.value}
+          value={value.value}
+          onInput={handleInput}
           placeholder={props.placeholder}
           disabled={props.disabled}
           readonly={props.readonly}

@@ -1,0 +1,13 @@
+.ey-collapse {
+  border: 1px solid #666;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  &__content {
+    padding: 10px;
+    border-top: 1px solid #666;
+  }
+}
