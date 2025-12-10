@@ -1,1 +1,6 @@
 node_modules
+# Histoire 构建输出
+packages/ui/.histoire/
+# 部署时生成的临时文件
+packages/ui/.nojekyll
+packages/ui/404.html

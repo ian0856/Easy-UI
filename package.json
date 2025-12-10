@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd packages/ui/ && pnpm dev",
+    "deploy:docs": "cd packages/ui && pnpm story:build && bash ../../scripts/prepare-deploy.sh && gh-pages -d .histoire/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@types/node": "^22.19.1",
+    "gh-pages": "^6.3.0",
     "turbo": "^2.6.2",
     "typescript": "^5.9.3"
   }
