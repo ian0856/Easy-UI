@@ -30,47 +30,6 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-button-button-story-vue",
-      "title": "Button",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-button-button-story-vue-0",
-          "title": "Type"
-        },
-        {
-          "id": "src-components-button-button-story-vue-1",
-          "title": "Variant"
-        },
-        {
-          "id": "src-components-button-button-story-vue-2",
-          "title": "Size"
-        },
-        {
-          "id": "src-components-button-button-story-vue-3",
-          "title": "Disabled"
-        },
-        {
-          "id": "src-components-button-button-story-vue-4",
-          "title": "Prefix Icon And Suffix Icon"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/Button/Button.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "Button"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
       "id": "src-components-checkbox-checkbox-story-vue",
       "title": "Checkbox",
       "group": "ui",
@@ -112,8 +71,8 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-collapse-collapse-story-vue",
-      "title": "Collapse",
+      "id": "src-components-button-button-story-vue",
+      "title": "Button",
       "group": "ui",
       "layout": {
         "type": "grid",
@@ -122,20 +81,32 @@
       "docsOnly": false,
       "variants": [
         {
-          "id": "src-components-collapse-collapse-story-vue-0",
-          "title": "Default"
+          "id": "src-components-button-button-story-vue-0",
+          "title": "Type"
         },
         {
-          "id": "src-components-collapse-collapse-story-vue-1",
-          "title": "Custom"
+          "id": "src-components-button-button-story-vue-1",
+          "title": "Variant"
+        },
+        {
+          "id": "src-components-button-button-story-vue-2",
+          "title": "Size"
+        },
+        {
+          "id": "src-components-button-button-story-vue-3",
+          "title": "Disabled"
+        },
+        {
+          "id": "src-components-button-button-story-vue-4",
+          "title": "Prefix Icon And Suffix Icon"
         }
       ],
       "responsiveDisabled": true,
       "autoPropsDisabled": false,
-      "relativePath": "src/components/Collapse/collapse.story.vue",
+      "relativePath": "src/components/Button/Button.story.vue",
       "supportPluginId": "vue3",
       "treePath": [
-        "Collapse"
+        "Button"
       ],
       "virtual": false,
       "markdownFile": null
@@ -169,6 +140,35 @@
       "supportPluginId": "vue3",
       "treePath": [
         "Icon"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
+      "id": "src-components-collapse-collapse-story-vue",
+      "title": "Collapse",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-collapse-collapse-story-vue-0",
+          "title": "Default"
+        },
+        {
+          "id": "src-components-collapse-collapse-story-vue-1",
+          "title": "Custom"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/Collapse/collapse.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "Collapse"
       ],
       "virtual": false,
       "markdownFile": null
