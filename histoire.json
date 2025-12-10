@@ -112,6 +112,35 @@
       "markdownFile": null
     },
     {
+      "id": "src-components-collapse-collapse-story-vue",
+      "title": "Collapse",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-collapse-collapse-story-vue-0",
+          "title": "Default"
+        },
+        {
+          "id": "src-components-collapse-collapse-story-vue-1",
+          "title": "Custom"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/Collapse/collapse.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "Collapse"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
       "id": "src-components-icon-icon-story-vue",
       "title": "Icon",
       "group": "icon",
@@ -173,35 +202,6 @@
       "supportPluginId": "vue3",
       "treePath": [
         "Input"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
-      "id": "src-components-collapse-collapse-story-vue",
-      "title": "Collapse",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-collapse-collapse-story-vue-0",
-          "title": "Default"
-        },
-        {
-          "id": "src-components-collapse-collapse-story-vue-1",
-          "title": "Custom"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/Collapse/collapse.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "Collapse"
       ],
       "virtual": false,
       "markdownFile": null
