@@ -1,8 +1,8 @@
-import { PropType, defineComponent } from "vue";
+import { PropType, defineComponent, Transition } from "vue";
 import { CollapseProps } from "./type";
 import { useVModel } from "@vueuse/core";
-import { EyButton } from "../Button";
 import './base.scss';
+import { EyIcon } from "..";
 
 export const EyCollapse = defineComponent({
   name: 'EyCollapse',
@@ -10,6 +10,10 @@ export const EyCollapse = defineComponent({
     modelValue: {
       type: Boolean as PropType<CollapseProps['modelValue']>,
       default: false,
+    },
+    trigger: {
+      type: String as PropType<CollapseProps['trigger']>,
+      default: 'click'
     },
   },
   setup(props, {emit, slots}) {
@@ -20,25 +24,35 @@ export const EyCollapse = defineComponent({
           {
             slots.header?.() ?? (
               <>
-                <EyButton text={modelValue.value ? '折叠' : '展开'} onClick={() => { modelValue.value = !modelValue.value }} />
+                <EyIcon
+                  size="1.5em"
+                  name={modelValue.value ? 'mdi:chevron-down' : 'mdi:chevron-right'}
+                  onClick={() => { if (props.trigger === 'click') { modelValue.value = !modelValue.value } }}
+                  onMouseEnter={() => { if (props.trigger === 'hover') { modelValue.value = true } }}
+                  onMouseLeave={() => { if (props.trigger === 'hover') { modelValue.value = false } }}
+                />
                 <span>Easy-UI Collapse</span>
               </>
             )
           }
         </div>
-        {
-          modelValue.value ? (
-            <div class="ey-collapse__content">
-              {
-                slots.content?.() ?? (
-                  <div>
-                    <p>Easy-UI Collapse</p>
-                  </div>
-                )
-              }
-            </div>
-          ) : null
-        }
+        <Transition name="collapse">
+          {
+            modelValue.value ? (
+              <div class="ey-collapse__content">
+                {
+                  slots.content?.() ?? (
+                    <div class="ey-collapse__content__default">
+                      <p>Easy-UI Collapse</p>
+                      <p>Easy-UI Collapse</p>
+                      <p>Easy-UI Collapse</p>
+                    </div>
+                  )
+                }
+              </div>
+            ) : null
+          }
+        </Transition>
       </div>
     }
   }

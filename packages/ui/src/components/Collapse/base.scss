@@ -1,5 +1,6 @@
 .ey-collapse {
   border: 1px solid #666;
+  border-radius: 5px;
   &__header {
     display: flex;
     align-items: center;
@@ -8,6 +9,32 @@
   }
   &__content {
     padding: 10px;
-    border-top: 1px solid #666;
+    will-change: max-height, opacity;
+    &__default {
+      padding: 10px;
+      background-color: #00000017;
+      border-radius: 5px;
+    }
   }
 }
+
+.collapse-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.collapse-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+.collapse-enter-from,
+.collapse-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
+
+.collapse-enter-to,
+.collapse-leave-from {
+  max-height: 500px;
+  opacity: 1;
+}
+

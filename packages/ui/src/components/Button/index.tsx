@@ -42,16 +42,35 @@ export const EyButton = defineComponent({
     },
   },
   emits: {
-    click: () => true
+    click: () => true,
+    mouseEnter: () => true,
+    mouseLeave: () => true,
+    hover: () => true,
   },
   setup(props, {emit, attrs }) {
     return () => {
       const handleClick = (e: MouseEvent) => {
+        if (props.disabled) return;
         emit('click')
         if (attrs.onClick && typeof attrs.onClick === 'function') {
           attrs.onClick(e)
         }
       }
+      
+      const handleMouseEnter = (e: MouseEvent) => {
+        emit('mouseEnter')
+        if (attrs.onMouseEnter && typeof attrs.onMouseEnter === 'function') {
+          attrs.onMouseEnter(e)
+        }
+      }
+      
+      const handleMouseLeave = (e: MouseEvent) => {
+        emit('mouseLeave')
+        if (attrs.onMouseLeave && typeof attrs.onMouseLeave === 'function') {
+          attrs.onMouseLeave(e)
+        }
+      }
+      
       return (
         <button 
           class={[
@@ -65,6 +84,8 @@ export const EyButton = defineComponent({
             props.class
           ]}
           onClick={handleClick}
+          onMouseenter={handleMouseEnter}
+          onMouseleave={handleMouseLeave}
           disabled={props.disabled}
         >
           {props.prefixIcon && <EyIcon name={props.prefixIcon} size="1.2em" class="mr-2px" />}

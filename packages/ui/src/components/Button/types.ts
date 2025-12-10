@@ -15,4 +15,7 @@ export interface ButtonProps {
 
 export type ButtonEmits = {
   (e: 'click'): void
+  (e: 'mouseEnter'): void
+  (e: 'mouseLeave'): void
+  (e: 'hover'): void
 }

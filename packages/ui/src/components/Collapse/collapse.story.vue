@@ -15,13 +15,13 @@
 <template>
   <Story title="Collapse" group="ui">
     <Variant title="Default">
-      <EyCollapse v-model="modelValue" />
+      <EyCollapse v-model="modelValue"/>
     </Variant>
     <Variant title="Custom">
       <EyCollapse v-model="customModelValue">
         <template #header>
           <div class="flex items-center gap-20px">
-            <EyButton text="action" @click="customModelValue = !customModelValue" />
+            <EyButton type="primary" text="action" @click="customModelValue = !customModelValue" />
             <span>custom header</span>
           </div>
         </template>

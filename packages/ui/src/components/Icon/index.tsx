@@ -26,9 +26,35 @@ export const EyIcon = defineComponent({
       default: ''
     }
   },
-  setup(props) {
+  emits: {
+    click: () => true,
+    mouseEnter: () => true,
+    mouseLeave: () => true,
+  },
+  setup(props, {emit, attrs}) {
     return () => {
       const size = resolveIconSize(props.size)
+
+      const handleClick = (e: MouseEvent) => {
+        emit('click')
+        if (attrs.onClick && typeof attrs.onClick === 'function') {
+          attrs.onClick(e)
+        }
+      }
+      
+      const handleMouseEnter = (e: MouseEvent) => {
+        emit('mouseEnter')
+        if (attrs.onMouseEnter && typeof attrs.onMouseEnter === 'function') {
+          attrs.onMouseEnter(e)
+        }
+      }
+      
+      const handleMouseLeave = (e: MouseEvent) => {
+        emit('mouseLeave')
+        if (attrs.onMouseLeave && typeof attrs.onMouseLeave === 'function') {
+          attrs.onMouseLeave(e)
+        }
+      }
       
       return (
         <span 
@@ -37,6 +63,9 @@ export const EyIcon = defineComponent({
             fontSize: size,
             color: props.color,
           }}
+          onClick={handleClick}
+          onMouseenter={handleMouseEnter}
+          onMouseleave={handleMouseLeave}
         >
           <Icon 
             icon={props.name}
