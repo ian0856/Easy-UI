@@ -14,9 +14,6 @@
         <template #default>
           <p>自定义弹窗体</p>
         </template>
-        <template #footer>
-          <EyButton text="关闭" @click="modelValue = false" />
-        </template>
       </EyModal>
     </Variant>
   </Story>

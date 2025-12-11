@@ -8,7 +8,6 @@ import { presetUno } from 'unocss'
 
 export default defineConfig({
   vite: {
-    base: '/Easy-UI/',
     plugins: [
       vue(),
       vueJsx(),

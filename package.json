@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd packages/ui/ && pnpm dev",
-    "deploy:docs": "cd packages/ui && pnpm story:build && bash ../../scripts/prepare-deploy.sh && gh-pages -d .histoire/dist",
+    "deploy:docs": "cd packages/ui && pnpm story:build && gh-pages -d .histoire/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

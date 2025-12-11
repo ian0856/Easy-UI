@@ -3,7 +3,7 @@ $badge-dot-offset: -2px;
 
 .ey-badge-wrapper {
   position: relative;
-  overflow: visible !important; // 强制覆盖可能的父容器样式
+  overflow: visible !important;
   display: inline-block;
 }
 

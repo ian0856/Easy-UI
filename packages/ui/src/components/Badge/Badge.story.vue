@@ -14,7 +14,7 @@
 <template>
   <Story title="Badge" group="ui">
     <Variant title="Default">
-      <div class="flex gap-20px" style="overflow: visible; padding: 10px;">
+      <div class="flex gap-20px">
         <EyBadge :value="value1">
           <EyButton text="Default Color" @click="value1 = !value1" />
         </EyBadge>
@@ -27,7 +27,7 @@
       </div>
     </Variant>
     <Variant title="Four positions">
-      <div class="flex gap-20px items-center" style="overflow: visible; padding: 10px;">
+      <div class="flex gap-20px items-center">
         <EyBadge text="99+" position="top-right" :value="value2">
           <EyButton text="Top Right" @click="value2 = !value2" />
         </EyBadge>
