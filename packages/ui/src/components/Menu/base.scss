@@ -1,0 +1,24 @@
+.ey-menu__wrapper {
+  width: fit-content;
+  min-width:320px;
+  background-color: var(--ey-bg-color);
+  color:var(--ey-color-default);
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  border-radius: 5px;
+  border: 1px solid var(--ey-border-color);
+  padding: 5px;
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      background-color: var(--ey-color-default-hover);
+    }
+  }
+  &__item--active {
+    background-color: var(--ey-color-primary-plain);
+    color: var(--ey-color-primary);
+  }
+}

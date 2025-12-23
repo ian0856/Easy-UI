@@ -5,7 +5,7 @@ input {
 .ey-input {
   width: 320px; // 固定宽度
   height: auto;
-  color: #000;
+  color: var(--ey-color-default);
   display: flex; // 确保是 flex 容器
   align-items: center;
   

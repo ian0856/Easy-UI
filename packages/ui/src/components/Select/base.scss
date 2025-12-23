@@ -1,4 +1,6 @@
 .ey-select {
+  width: fit-content;
+  height: fit-content;
   &__content {
     color: #000;
     width: 220px;
@@ -9,5 +11,13 @@
     &:focus {
       border: 1px solid #409eff;
     }
+  }
+  &__menu-wrapper {
+    position: absolute;
+    top: 100%; // 位于输入框下方
+    left: 0;
+    margin-top: 5px;
+    z-index: 1000; // 确保菜单在其他元素之上
+    width: 100%; // 与输入框同宽
   }
 }

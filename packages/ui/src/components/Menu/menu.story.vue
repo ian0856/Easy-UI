@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  import { EySelect } from './index'
+  import { EyMenu } from './index'
   import { ref } from 'vue'
 
-  const value = ref('1')
   const options = ref([
     { label: 'Option 1', value: '1' },
     { label: 'Option 2', value: '2' },
     { label: 'Option 3', value: '3' },
   ])
+  const values = ref('1')
 
   const multiple_options = ref([
     { label: 'Option 1', value: '1' },
@@ -15,16 +15,16 @@
     { label: 'Option 3', value: '3' },
     { label: 'Option 4', value: '4' },
   ])
-  const multiple_value = ref([])
+  const values2 = ref(['2', '3'])
 </script>
 
 <template>
-  <Story title="Select" group="ui">
+  <Story title="Menu" group="ui">
     <Variant title="Default">
-      <EySelect :options="options" v-model="value" />
+      <EyMenu :options="options" v-model="values" />
     </Variant>
     <Variant title="Multiple">
-      <EySelect :options="multiple_options" v-model="multiple_value" multiple />
+      <EyMenu :options="multiple_options" v-model="values2" multiple />
     </Variant>
   </Story>
 </template>
