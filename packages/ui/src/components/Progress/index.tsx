@@ -21,8 +21,10 @@ export const EyProgress = defineComponent({
   setup(props) {
     return () => {
       return (
-        <div class="ey-progress">
-          <div class="ey-progress__bar" style={{ width: `${props.modelValue}%`, backgroundColor: props.color }}>
+        <div class="ey-progress__wrapper">
+          <div class="ey-progress">
+            <div class="ey-progress__bar" style={{ width: `${props.modelValue}%`, backgroundColor: props.color }}>
+            </div>
           </div>
           {props.showPercent ? (
             <span class="ey-progress__percent">{props.modelValue}%</span>

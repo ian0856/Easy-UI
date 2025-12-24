@@ -14,6 +14,7 @@
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@histoire/plugin-vue": "1.0.0-alpha.5",
+    "@types/lodash": "^4.17.21",
     "@unocss/preset-uno": "^66.5.10",
     "@unocss/reset": "^66.5.10",
     "@vitejs/plugin-vue": "^6.0.2",
@@ -27,6 +28,7 @@
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@vueuse/core": "^14.1.0",
+    "lodash": "^4.17.21",
     "zod": "^4.1.13"
   }
 }

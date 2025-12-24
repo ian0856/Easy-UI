@@ -1,0 +1,39 @@
+.ey-tree-selection {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  .ey-tree-selection-leaf-node {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid hsl(0, 0%, 40%);
+    height: 30px;
+    line-height: 30px;
+  }
+  .ey-tree-selection-tree-node {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+    
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid hsl(0, 0%, 40%);
+      height: 30px;
+      line-height: 30px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+}

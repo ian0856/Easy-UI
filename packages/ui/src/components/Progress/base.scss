@@ -1,20 +1,25 @@
-.ey-progress {
-  height: 16px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  width: 320px;
-  border-radius: 15px;
-  padding: 1px;
-  box-sizing: border-box;
+.ey-progress__wrapper {
   display: flex;
   align-items: center;
-  &__bar {
+  gap: 5px;
+  .ey-progress {
+    height: 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 320px;
     border-radius: 15px;
-    height: 100%;
+    padding: 1px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    &__bar {
+      border-radius: 15px;
+      height: 100%;
+      transition: width 0.2s ease;
+    }
   }
-  &__percent {
-    margin-left: 5px;
+  .ey-progress__percent {
     font-size: 12px;
-    color: #333;
+    color: var(--ey-color-default);
   }
 }

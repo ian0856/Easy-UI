@@ -6,8 +6,7 @@
     "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": ["vue/jsx"]
+    "skipLibCheck": true
   },
   "include": ["src/**/*", "*.config.ts", "*.config.js"],
   "exclude": ["node_modules"]
