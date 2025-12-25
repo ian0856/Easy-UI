@@ -3,6 +3,7 @@ export interface TreeNode {
   value: string
   disabled?: boolean
   children?: TreeNode[]
+  
 }
 export interface CheckboxState {
   checked: boolean

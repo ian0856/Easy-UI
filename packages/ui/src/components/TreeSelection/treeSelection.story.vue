@@ -8,6 +8,7 @@
       { label: 'Option 1-1', value: '1-1' },
       { label: 'Option 1-2', value: '1-2' },
       { label: 'Option 1-3', value: '1-3' },
+      { label: 'Option 1-4', value: '1-4', disabled: true },
     ] },
     { label: 'Option 2', value: '2', children: [
       { label: 'Option 2-1', value: '2-1', children: [

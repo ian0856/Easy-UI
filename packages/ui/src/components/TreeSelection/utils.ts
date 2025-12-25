@@ -1,96 +1,40 @@
-import { CheckboxState, TreeNode } from "./type";
-import _ from 'lodash'
+import { TreeNode } from "./type"
 
-function findTreeNode(value: string, options: TreeNode[]): TreeNode | undefined {
-  for (const node of options) {
-    if (node.value === value) {
-      return node
-    }
-    if (node.children && node.children.length > 0) {
-      const found = findTreeNode(value, node.children)
-      if (found) {
-        return found
-      }
+// 获取所有后代节点values
+export function getAllDescendantValues(options: TreeNode[]) : string[] {
+  const descendantValues: string[] = []
+  const traverse = (node: TreeNode) => {
+    descendantValues.push(node.value)
+    if(node.children && node.children.length > 0) {
+      node.children.forEach(child => traverse(child))
     }
   }
-  return undefined
+  options.forEach(option => traverse(option))
+  return descendantValues
 }
 
-// 根据子节点value获取父节点
-function getTreeNodeByChildValue (value: string, options: TreeNode[]) {
-  // 所有父节点
-  const treeNodes = options.filter(item => item.children)
-  
-
-}
-
-function getAllChildrenNodeValues (treeNode: TreeNode, values: string[] = []) {
-  if(!treeNode || !treeNode.children) return values
-
-  function resolveChild (child: TreeNode) {
-    if(!child) return
-
-    values.push(child.value)
-
-    if(child.children && child.children.length > 0) {
-      _.forEach(child.children, (c: TreeNode) => {
-        resolveChild(c)
-      })
-    }
-  }
-
-  _.forEach(treeNode.children, (child: TreeNode) => {
-    resolveChild(child)
-  })
-
-  return values
-}
-
-
-
-// 管理选择框状态
-export function useCheckboxState (value: string, selectedKeys: string[], options: TreeNode[]) {
-  const TreeNodeItem = findTreeNode(value, options)
-
-  if(TreeNodeItem?.children) {
-    const allChildrenValues = getAllChildrenNodeValues(TreeNodeItem)
-
-    const selectedChildrenValues = selectedKeys.filter(item => allChildrenValues.includes(item))
-
-    const isIndeterminate = selectedChildrenValues.length > 0 && selectedChildrenValues.length < allChildrenValues.length
-    const isChecked = selectedChildrenValues.length === allChildrenValues.length
-
-    const toggle = () => {
-      if(isIndeterminate || isChecked) {
-        selectedKeys = _.difference(selectedKeys, [...allChildrenValues, value])
+// 根据树节点value获取所有后代节点
+export function getAllDescendantNodesByValue(options: TreeNode[], value: string) : string[] {
+  const findTreeNodeByValue = (nodeList: TreeNode[]): TreeNode | undefined => {
+    for (const node of nodeList) {
+      if (node.value === value) {
+        return node
       }
-      else {
-        selectedKeys = [...selectedKeys, ...allChildrenValues, value]
+      if (node.children && node.children.length > 0) {
+        const found = findTreeNodeByValue(node.children)
+        if (found) {
+          return found
+        }
       }
-      return selectedKeys
     }
-
-    return {
-      isChecked,
-      isIndeterminate,
-      toggle
-    }
+    return undefined
   }
 
-  const isChecked = selectedKeys.includes(value)
-
-  const toggle = () => {
-    if(isChecked) {
-      selectedKeys = _.difference(selectedKeys, [value])
-    }
-    else {
-      selectedKeys = [...selectedKeys, value]
-    }
-    return selectedKeys
+  const targetNode = findTreeNodeByValue(options)
+  if (!targetNode) {
+    return []
   }
 
-  return {
-    isChecked,
-    toggle
-  }
+  const result = getAllDescendantValues(targetNode.children || [])
+  return result
 }
