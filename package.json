@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "cd packages/ui/ && pnpm dev",
     "deploy:docs": "cd packages/ui && pnpm story:build && gh-pages -d .histoire/dist",
+    "build:ui": "cd packages/ui && pnpm build",
+    "publish:ui": "cd packages/ui && pnpm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

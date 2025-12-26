@@ -1,0 +1,31 @@
+# 开发文件
+.histoire/
+node_modules/
+*.log
+.DS_Store
+
+# 配置文件
+*.config.ts
+*.config.js
+tsconfig.json
+vite.config.ts
+vite.build.config.ts
+histoire.config.ts
+
+# 源代码（可选，如果希望用户也能访问源码）
+# src/
+
+# 测试和文档
+*.story.vue
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# 其他
+.git/
+.gitignore
+README.md
+package-lock.json
+pnpm-lock.yaml
+
