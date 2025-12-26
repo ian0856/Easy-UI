@@ -2,11 +2,11 @@
   padding: 4px 8px;
   display: flex;
   border:5px;
-  width: fit-content;
   border-radius: 5px;
   background-color: rgba(64, 158, 255, 0.2);
   color: #409eff;
-
   align-items: center;
   justify-content: center;
+  max-width: 100px;
+
 }

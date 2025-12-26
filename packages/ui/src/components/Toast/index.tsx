@@ -8,7 +8,7 @@ export const EyToast = defineComponent({
   props: {
     message: {
       type: String as PropType<ToastProps['message']>,
-      required: true
+      default: 'Hello From Easy-UI Toast'
     },
     modelValue: {
       type: Boolean as PropType<ToastProps['modelValue']>,

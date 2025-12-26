@@ -8,6 +8,7 @@ export interface TreeNode {
 export interface CheckboxState {
   checked: boolean
   indeterminate: boolean
+  additional?: boolean
 }
 export interface TreeSelectionProps {
   modelValue: string[]
