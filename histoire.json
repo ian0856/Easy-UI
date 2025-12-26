@@ -30,47 +30,6 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-checkbox-checkbox-story-vue",
-      "title": "Checkbox",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-checkbox-checkbox-story-vue-0",
-          "title": "Default"
-        },
-        {
-          "id": "src-components-checkbox-checkbox-story-vue-1",
-          "title": "Outlined"
-        },
-        {
-          "id": "src-components-checkbox-checkbox-story-vue-2",
-          "title": "Card"
-        },
-        {
-          "id": "src-components-checkbox-checkbox-story-vue-3",
-          "title": "Tab"
-        },
-        {
-          "id": "src-components-checkbox-checkbox-story-vue-4",
-          "title": "Custom Color"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/Checkbox/checkbox.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "Checkbox"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
       "id": "src-components-button-button-story-vue",
       "title": "Button",
       "group": "ui",
@@ -112,8 +71,8 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-collapse-collapse-story-vue",
-      "title": "Collapse",
+      "id": "src-components-checkbox-checkbox-story-vue",
+      "title": "Checkbox",
       "group": "ui",
       "layout": {
         "type": "grid",
@@ -122,20 +81,32 @@
       "docsOnly": false,
       "variants": [
         {
-          "id": "src-components-collapse-collapse-story-vue-0",
+          "id": "src-components-checkbox-checkbox-story-vue-0",
           "title": "Default"
         },
         {
-          "id": "src-components-collapse-collapse-story-vue-1",
-          "title": "Custom"
+          "id": "src-components-checkbox-checkbox-story-vue-1",
+          "title": "Outlined"
+        },
+        {
+          "id": "src-components-checkbox-checkbox-story-vue-2",
+          "title": "Card"
+        },
+        {
+          "id": "src-components-checkbox-checkbox-story-vue-3",
+          "title": "Tab"
+        },
+        {
+          "id": "src-components-checkbox-checkbox-story-vue-4",
+          "title": "Custom Color"
         }
       ],
       "responsiveDisabled": true,
       "autoPropsDisabled": false,
-      "relativePath": "src/components/Collapse/collapse.story.vue",
+      "relativePath": "src/components/Checkbox/checkbox.story.vue",
       "supportPluginId": "vue3",
       "treePath": [
-        "Collapse"
+        "Checkbox"
       ],
       "virtual": false,
       "markdownFile": null
@@ -169,6 +140,35 @@
       "supportPluginId": "vue3",
       "treePath": [
         "Icon"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
+      "id": "src-components-collapse-collapse-story-vue",
+      "title": "Collapse",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-collapse-collapse-story-vue-0",
+          "title": "Default"
+        },
+        {
+          "id": "src-components-collapse-collapse-story-vue-1",
+          "title": "Custom"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/Collapse/collapse.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "Collapse"
       ],
       "virtual": false,
       "markdownFile": null
@@ -261,6 +261,47 @@
       "markdownFile": null
     },
     {
+      "id": "src-components-radiogroup-radio-group-story-vue",
+      "title": "RadioGroup",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-radiogroup-radio-group-story-vue-0",
+          "title": "Default"
+        },
+        {
+          "id": "src-components-radiogroup-radio-group-story-vue-1",
+          "title": "Outlined"
+        },
+        {
+          "id": "src-components-radiogroup-radio-group-story-vue-2",
+          "title": "Card"
+        },
+        {
+          "id": "src-components-radiogroup-radio-group-story-vue-3",
+          "title": "Tab"
+        },
+        {
+          "id": "src-components-radiogroup-radio-group-story-vue-4",
+          "title": "Disabled"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/RadioGroup/radio-group.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "RadioGroup"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
       "id": "src-components-progress-progress-story-vue",
       "title": "Progress",
       "group": "ui",
@@ -322,47 +363,6 @@
       "supportPluginId": "vue3",
       "treePath": [
         "Select"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
-      "id": "src-components-radiogroup-radio-group-story-vue",
-      "title": "RadioGroup",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-radiogroup-radio-group-story-vue-0",
-          "title": "Default"
-        },
-        {
-          "id": "src-components-radiogroup-radio-group-story-vue-1",
-          "title": "Outlined"
-        },
-        {
-          "id": "src-components-radiogroup-radio-group-story-vue-2",
-          "title": "Card"
-        },
-        {
-          "id": "src-components-radiogroup-radio-group-story-vue-3",
-          "title": "Tab"
-        },
-        {
-          "id": "src-components-radiogroup-radio-group-story-vue-4",
-          "title": "Disabled"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/RadioGroup/radio-group.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "RadioGroup"
       ],
       "virtual": false,
       "markdownFile": null
