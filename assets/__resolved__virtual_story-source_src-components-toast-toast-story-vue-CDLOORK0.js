@@ -4,14 +4,13 @@ const __resolved__virtual_storySource_srcComponentsToastToastStoryVue = `<script
   import { EyButton } from '../Button'
 
   const modelValue = ref(false)
-  const message = '我是toast内容'
 <\/script>
 
 <template>
   <Story title="Toast" group="ui">
     <Variant title="Default">
       <EyButton text="打开Toast" @click="modelValue = true" />
-      <EyToast v-model="modelValue" :message="message" />
+      <EyToast v-model="modelValue"/>
     </Variant>
   </Story>
 </template>`;

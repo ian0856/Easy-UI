@@ -1,9 +1,9 @@
 import { A as reactive, d as defineComponent, Z as toRefs, $ as useRouter, k as watch, n as ref, m as useRoute, c as computed, a as createElementBlock, g as createCommentVNode, y as createBlock, e as unref, p as withCtx, f as createVNode, z as createTextVNode, I as Icon, V as watchEffect, o as openBlock, a0 as nextTick, h as defineStore, a1 as useResizeObserver, s as resolveComponent, a2 as renderSlot, b as createBaseVNode, M as h, a3 as onBeforeUnmount, X as mergeProps, T as Transition, q as normalizeClass, t as toDisplayString, a4 as e0, a5 as Wm, a6 as Km, a7 as qm, r as resolveDirective, w as withDirectives, a8 as withModifiers, Y as resolveDynamicComponent, F as Fragment, x as renderList, a9 as kt, aa as clone, ab as omit, j as useStorage, G as onMounted, ac as useTimeoutFn, ad as onClickOutside, ae as vModelText, v as withKeys, i as isRef, N as applyState, W as markRaw, af as shallowRef, ag as createHighlighter, ah as Zm, ai as unindent, l as useCssVars, B as normalizeStyle, aj as onUnmounted, ak as createStaticVNode, al as Ot, u as useEventListener, am as toRaw } from "./vendor-Cqrudiws.js";
-import { u as useStoryStore } from "./story-DdKybW-A.js";
+import { u as useStoryStore } from "./story-pbgTm4xY.js";
 import { _ as _export_sfc, b as BaseSplitPane, u as useScrollOnActive, i as isMobile, B as BaseListItemLink, a as _sfc_main$A } from "./responsive-B6PZxgOx.js";
 import { B as BaseEmpty } from "./BaseEmpty.vue-hnzjkNil.js";
-import { h as histoireConfig, b as clientSupportPlugins, i as isDark, d as base } from "./mapping-DuKasXAW.js";
-import { t as toRawDeep, _ as _sfc_main$z, g as getContrastColor, S as SANDBOX_READY, E as EVENT_SEND, a as STATE_SYNC, P as PREVIEW_SETTINGS_SYNC } from "./state-BVPWBiW7.js";
+import { h as histoireConfig, b as clientSupportPlugins, i as isDark, d as base } from "./mapping-BlFFqRaa.js";
+import { t as toRawDeep, _ as _sfc_main$z, g as getContrastColor, S as SANDBOX_READY, E as EVENT_SEND, a as STATE_SYNC, P as PREVIEW_SETTINGS_SYNC } from "./state-bmJzMqEm.js";
 const markdownFiles = reactive({});
 const _hoisted_1$t = ["innerHTML"];
 function useStoryDoc(story) {

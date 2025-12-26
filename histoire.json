@@ -30,47 +30,6 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-button-button-story-vue",
-      "title": "Button",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-button-button-story-vue-0",
-          "title": "Type"
-        },
-        {
-          "id": "src-components-button-button-story-vue-1",
-          "title": "Variant"
-        },
-        {
-          "id": "src-components-button-button-story-vue-2",
-          "title": "Size"
-        },
-        {
-          "id": "src-components-button-button-story-vue-3",
-          "title": "Disabled"
-        },
-        {
-          "id": "src-components-button-button-story-vue-4",
-          "title": "Prefix Icon And Suffix Icon"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/Button/Button.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "Button"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
       "id": "src-components-checkbox-checkbox-story-vue",
       "title": "Checkbox",
       "group": "ui",
@@ -107,6 +66,47 @@
       "supportPluginId": "vue3",
       "treePath": [
         "Checkbox"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
+      "id": "src-components-button-button-story-vue",
+      "title": "Button",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-button-button-story-vue-0",
+          "title": "Type"
+        },
+        {
+          "id": "src-components-button-button-story-vue-1",
+          "title": "Variant"
+        },
+        {
+          "id": "src-components-button-button-story-vue-2",
+          "title": "Size"
+        },
+        {
+          "id": "src-components-button-button-story-vue-3",
+          "title": "Disabled"
+        },
+        {
+          "id": "src-components-button-button-story-vue-4",
+          "title": "Prefix Icon And Suffix Icon"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/Button/Button.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "Button"
       ],
       "virtual": false,
       "markdownFile": null
@@ -298,6 +298,35 @@
       "markdownFile": null
     },
     {
+      "id": "src-components-select-select-story-vue",
+      "title": "Select",
+      "group": "ui",
+      "layout": {
+        "type": "grid",
+        "width": "80%"
+      },
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "src-components-select-select-story-vue-0",
+          "title": "Default"
+        },
+        {
+          "id": "src-components-select-select-story-vue-1",
+          "title": "Multiple"
+        }
+      ],
+      "responsiveDisabled": true,
+      "autoPropsDisabled": false,
+      "relativePath": "src/components/Select/select.story.vue",
+      "supportPluginId": "vue3",
+      "treePath": [
+        "Select"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
       "id": "src-components-radiogroup-radio-group-story-vue",
       "title": "RadioGroup",
       "group": "ui",
@@ -339,35 +368,6 @@
       "markdownFile": null
     },
     {
-      "id": "src-components-select-select-story-vue",
-      "title": "Select",
-      "group": "ui",
-      "layout": {
-        "type": "grid",
-        "width": "80%"
-      },
-      "docsOnly": false,
-      "variants": [
-        {
-          "id": "src-components-select-select-story-vue-0",
-          "title": "Default"
-        },
-        {
-          "id": "src-components-select-select-story-vue-1",
-          "title": "Multiple"
-        }
-      ],
-      "responsiveDisabled": true,
-      "autoPropsDisabled": false,
-      "relativePath": "src/components/Select/select.story.vue",
-      "supportPluginId": "vue3",
-      "treePath": [
-        "Select"
-      ],
-      "virtual": false,
-      "markdownFile": null
-    },
-    {
       "id": "src-components-tag-tag-story-vue",
       "title": "Tag",
       "group": "ui",
@@ -380,6 +380,10 @@
         {
           "id": "src-components-tag-tag-story-vue-0",
           "title": "Default"
+        },
+        {
+          "id": "src-components-tag-tag-story-vue-1",
+          "title": "Closable"
         }
       ],
       "responsiveDisabled": true,

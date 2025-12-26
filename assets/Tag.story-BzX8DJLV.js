@@ -1,32 +1,16 @@
-import { ap as defineComponent, aq as createVNode, ar as resolveComponent, as as createBlock, au as withCtx, at as openBlock, av as createBaseVNode } from "./vendor-Cqrudiws.js";
+import { ap as defineComponent, ar as resolveComponent, as as createBlock, au as withCtx, at as openBlock, aq as createVNode, av as createBaseVNode } from "./vendor-Cqrudiws.js";
+import { E as EyTag } from "./index-fJqYAxTE.js";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.js";
-const EyTag = /* @__PURE__ */ defineComponent({
-  name: "EyTag",
-  props: {
-    text: {
-      type: String,
-      default: "Easy-UI"
-    },
-    closable: {
-      type: Boolean,
-      default: false
-    }
-  },
-  setup(props) {
-    return () => {
-      return createVNode("div", {
-        "class": "ey-tag"
-      }, [createVNode("div", {
-        "class": "ey-tag__content"
-      }, [props.text])]);
-    };
-  }
-});
+/* empty css              */
+import "./index-DmAJkX_z.js";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "Tag.story",
   setup(__props, { expose: __expose }) {
     __expose();
-    const __returned__ = { get EyTag() {
+    const handleClose = (text) => {
+      console.log("close", text);
+    };
+    const __returned__ = { handleClose, get EyTag() {
       return EyTag;
     } };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -34,6 +18,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   }
 });
 const _hoisted_1 = { class: "flex gap-20px" };
+const _hoisted_2 = { class: "flex gap-20px" };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Variant = resolveComponent("Variant");
   const _component_Story = resolveComponent("Story");
@@ -46,6 +31,19 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         default: withCtx(() => [
           createBaseVNode("div", _hoisted_1, [
             createVNode($setup["EyTag"], { text: "Default" })
+          ])
+        ]),
+        _: 1
+        /* STABLE */
+      }),
+      createVNode(_component_Variant, { title: "Closable" }, {
+        default: withCtx(() => [
+          createBaseVNode("div", _hoisted_2, [
+            createVNode($setup["EyTag"], {
+              text: "Closable",
+              closable: "",
+              onClose: $setup.handleClose
+            })
           ])
         ]),
         _: 1

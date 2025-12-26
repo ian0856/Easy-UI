@@ -1,13 +1,15 @@
-import { ap as defineComponent, aq as createVNode, az as createTextVNode, aw as ref, aE as computed, ax as useVModel, aK as lodashExports, ar as resolveComponent, as as createBlock, au as withCtx, at as openBlock } from "./vendor-Cqrudiws.js";
+import { ap as defineComponent, aq as createVNode, az as createTextVNode, aA as Transition, aw as ref, aK as lodashExports, aE as computed, ax as useVModel, ar as resolveComponent, as as createBlock, au as withCtx, at as openBlock, av as createBaseVNode, aB as createElementBlock, ay as Fragment, aC as renderList } from "./vendor-Cqrudiws.js";
 /* empty css              */
 import { E as EyIcon } from "./index-DmAJkX_z.js";
+import { E as EyTag } from "./index-fJqYAxTE.js";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.js";
 function getAllDescendantValues(options) {
   const descendantValues = [];
   const traverse = (node) => {
-    descendantValues.push(node.value);
     if (node.children && node.children.length > 0) {
       node.children.forEach((child) => traverse(child));
+    } else {
+      descendantValues.push(node.value);
     }
   };
   options.forEach((option) => traverse(option));
@@ -35,6 +37,17 @@ function getAllDescendantNodesByValue(options, value) {
   const result = getAllDescendantValues(targetNode.children || []);
   return result;
 }
+function getAllExpandableNodeValues(options) {
+  const expandableValues = [];
+  const traverse = (node) => {
+    if (node.children && node.children.length > 0) {
+      expandableValues.push(node.value);
+      node.children.forEach((child) => traverse(child));
+    }
+  };
+  options.forEach((option) => traverse(option));
+  return expandableValues;
+}
 const EyTreeSelection = /* @__PURE__ */ defineComponent({
   name: "EyTreeSelection",
   props: {
@@ -48,14 +61,14 @@ const EyTreeSelection = /* @__PURE__ */ defineComponent({
     }
   },
   emits: {
-    "update:modelValue": (value) => true
+    "update:modelValue": (_value) => true
   },
   setup(props, {
     emit
   }) {
     const modelValue = useVModel(props, "modelValue", emit);
     const useCollapsedState = () => {
-      const collapsedKeys2 = ref(["root"]);
+      const collapsedKeys2 = ref([]);
       const update = (key) => {
         if (collapsedKeys2.value.includes(key)) {
           collapsedKeys2.value = collapsedKeys2.value.filter((k) => k !== key);
@@ -72,6 +85,14 @@ const EyTreeSelection = /* @__PURE__ */ defineComponent({
       collapsedKeys,
       update: updateCollapsedState
     } = useCollapsedState();
+    const toggleAllNodes = () => {
+      const treeNodeValues = getAllExpandableNodeValues(props.options);
+      if (collapsedKeys.value.includes("root")) {
+        collapsedKeys.value = [];
+      } else {
+        collapsedKeys.value = lodashExports.xor(collapsedKeys.value, treeNodeValues, ["root"]);
+      }
+    };
     const useRootCheckboxState = () => {
       const descendantValues = getAllDescendantValues(props.options);
       const isChecked2 = computed(() => {
@@ -170,7 +191,7 @@ const EyTreeSelection = /* @__PURE__ */ defineComponent({
         "onChange": () => toggle2()
       }, null), createVNode("span", null, [node.label])]), createVNode(EyIcon, {
         "onClick": () => updateCollapsedState(node.value),
-        "name": "mdi:chevron-down",
+        "name": isCollapsed.value ? "mdi:chevron-up" : "mdi:chevron-down",
         "class": "ml-auto",
         "size": "1.5em"
       }, null)]), createVNode("div", {
@@ -203,12 +224,16 @@ const EyTreeSelection = /* @__PURE__ */ defineComponent({
         "indeterminate": isIndeterminate.value,
         "onChange": () => toggle()
       }, null), createVNode("span", null, [createTextVNode("Root")])]), createVNode(EyIcon, {
-        "name": "mdi:chevron-down",
-        "class": "ml-auto",
+        "onClick": toggleAllNodes,
+        "name": collapsedKeys.value.includes("root") ? "mdi:chevron-up" : "mdi:chevron-down",
         "size": "1.5em"
-      }, null)]), createVNode("div", {
-        "class": "ey-tree-selection__tree"
-      }, [props.options.map((option) => renderTreeNode(option))])]);
+      }, null)]), createVNode(Transition, {
+        "name": "collapse"
+      }, {
+        default: () => [collapsedKeys.value.includes("root") ? null : createVNode("div", {
+          "class": "ey-tree-selection__tree"
+        }, [props.options.map((option) => renderTreeNode(option))])]
+      })]);
     };
   }
 });
@@ -236,11 +261,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     const __returned__ = { modelValue, options, get EyTreeSelection() {
       return EyTreeSelection;
+    }, get EyTag() {
+      return EyTag;
     } };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
 });
+const _hoisted_1 = { class: "grid grid-cols-2 gap-8px" };
+const _hoisted_2 = { class: "flex flex-col gap-8px" };
+const _hoisted_3 = { class: "flex flex-wrap gap-8px" };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Variant = resolveComponent("Variant");
   const _component_Story = resolveComponent("Story");
@@ -251,11 +281,35 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     default: withCtx(() => [
       createVNode(_component_Variant, { title: "Default" }, {
         default: withCtx(() => [
-          createVNode($setup["EyTreeSelection"], {
-            modelValue: $setup.modelValue,
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.modelValue = $event),
-            options: $setup.options
-          }, null, 8, ["modelValue", "options"])
+          createBaseVNode("div", _hoisted_1, [
+            createVNode($setup["EyTreeSelection"], {
+              modelValue: $setup.modelValue,
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.modelValue = $event),
+              options: $setup.options
+            }, null, 8, ["modelValue", "options"]),
+            createBaseVNode("div", _hoisted_2, [
+              _cache[1] || (_cache[1] = createBaseVNode(
+                "p",
+                { class: "text-16px font-bold" },
+                "Selected Values:",
+                -1
+                /* CACHED */
+              )),
+              createBaseVNode("div", _hoisted_3, [
+                (openBlock(true), createElementBlock(
+                  Fragment,
+                  null,
+                  renderList($setup.modelValue, (item) => {
+                    return openBlock(), createElementBlock("div", { key: item }, [
+                      createVNode($setup["EyTag"], { text: item }, null, 8, ["text"])
+                    ]);
+                  }),
+                  128
+                  /* KEYED_FRAGMENT */
+                ))
+              ])
+            ])
+          ])
         ]),
         _: 1
         /* STABLE */

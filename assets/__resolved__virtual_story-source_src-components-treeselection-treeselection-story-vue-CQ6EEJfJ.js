@@ -1,5 +1,6 @@
 const __resolved__virtual_storySource_srcComponentsTreeselectionTreeselectionStoryVue = `<script setup lang="ts">
   import { EyTreeSelection } from './index'
+  import { EyTag } from '../Tag'
   import { ref } from 'vue'
 
   const modelValue = ref([])
@@ -25,7 +26,17 @@ const __resolved__virtual_storySource_srcComponentsTreeselectionTreeselectionSto
 <template>
   <Story title="TreeSelection" group="ui">
     <Variant title="Default">
-      <EyTreeSelection v-model="modelValue" :options="options" />
+      <div class="grid grid-cols-2 gap-8px">
+        <EyTreeSelection v-model="modelValue" :options="options" />
+        <div class="flex flex-col gap-8px">
+          <p class="text-16px font-bold">Selected Values:</p>
+          <div class="flex flex-wrap gap-8px">
+            <div v-for="item in modelValue" :key="item">
+              <EyTag :text="item" />
+            </div>
+          </div>
+        </div>
+      </div>
     </Variant>
   </Story>
 </template>`;

@@ -8,7 +8,7 @@ const EyToast = /* @__PURE__ */ defineComponent({
   props: {
     message: {
       type: String,
-      required: true
+      default: "Hello From Easy-UI Toast"
     },
     modelValue: {
       type: Boolean,
@@ -56,13 +56,12 @@ const EyToast = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const message = "我是toast内容";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "toast.story",
   setup(__props, { expose: __expose }) {
     __expose();
     const modelValue = ref(false);
-    const __returned__ = { modelValue, message, get EyToast() {
+    const __returned__ = { modelValue, get EyToast() {
       return EyToast;
     }, get EyButton() {
       return EyButton;
@@ -87,8 +86,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           }),
           createVNode($setup["EyToast"], {
             modelValue: $setup.modelValue,
-            "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.modelValue = $event),
-            message: $setup.message
+            "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.modelValue = $event)
           }, null, 8, ["modelValue"])
         ]),
         _: 1
