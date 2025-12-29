@@ -1,0 +1,23 @@
+.ey-table-wrapper {
+  .ey-table {
+    border-collapse: collapse;
+    &__header {
+      background-color: var(--ey-bg-color-page);
+      &-row {
+        height: 35px;
+      }
+    }
+    &__body {
+      &-row {
+        height: 35px;
+        &__cell {
+          padding: 5px 10px;
+        }
+      }
+    }
+    
+    tr, th, td {
+      border: 1px solid var(--ey-border-color);
+    }
+  }
+}
