@@ -15,7 +15,8 @@
     }
   }
   .ey-tabs--card {
-   
+     border: 1px solid var(--ey-color-primary-plain);
+     border-radius: 5px;
     .ey-tabs__item {
       &--active {
         border-bottom: none;
@@ -35,5 +36,8 @@
       background-color: var(--ey-color-primary);
       transition: all 0.3s ease;
     }
+  }
+  .ey-tabs__content {
+    padding: 10px 0;
   }
 }

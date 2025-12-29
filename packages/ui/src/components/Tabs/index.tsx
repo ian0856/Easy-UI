@@ -18,6 +18,10 @@ export const EyTabs = defineComponent({
       type: String as PropType<TabsProps['type']>,
       default: 'default'
     },
+    direction: {
+      type: String as PropType<TabsProps['direction']>,
+      default: 'horizontal'
+    }
   },
   emits: {
     'update:modelValue': (_value: string) => true,
@@ -58,6 +62,13 @@ export const EyTabs = defineComponent({
                   }}
                   class="ey-tabs__bottom-line__item"
                 ></div>
+              </div>
+            )
+          }
+          {
+            props.options.find(opt => opt.value === modelValue.value)?.content && (
+              <div class="ey-tabs__content">
+                {props.options.find(opt => opt.value === modelValue.value)?.content}
               </div>
             )
           }
