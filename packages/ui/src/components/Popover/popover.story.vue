@@ -14,6 +14,7 @@
         </template>
         <template #content>
           <p>This is a popover content</p>
+          <p>This is a popover content</p>
         </template>
       </EyPopover>
     </Variant>
