@@ -1,6 +1,7 @@
 import { PropType, defineComponent } from "vue";
 import { TextareaProps } from "./type";
 import { useVModel } from "@vueuse/core";
+import './base.scss'
 
 export const EyTextarea = defineComponent({
   name: 'EyTextarea',

@@ -47,7 +47,7 @@ export const EyButton = defineComponent({
     mouseLeave: () => true,
     hover: () => true,
   },
-  setup(props, {emit, attrs }) {
+  setup(props, {emit, attrs, slots }) {
     return () => {
       const handleClick = (e: MouseEvent) => {
         if (props.disabled) return;
@@ -89,7 +89,7 @@ export const EyButton = defineComponent({
           disabled={props.disabled}
         >
           {props.prefixIcon && <EyIcon name={props.prefixIcon} size="1.2em" class="mr-2px" />}
-          {props.text}
+          {slots.default?.() ?? props.text}
           {props.suffixIcon && <EyIcon name={props.suffixIcon} size="1.2em" class="ml-2px" />}
         </button>
       )

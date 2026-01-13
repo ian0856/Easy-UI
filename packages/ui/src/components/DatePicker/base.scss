@@ -1,0 +1,81 @@
+.ey-date-picker-wrapper {
+  position: relative;
+  .calendar {
+    position: absolute;
+    top: 39px;
+    width: 320px;
+    height: 340px;
+    background-color: #fff;
+    border: 1px solid var(--ey-border-color);
+    color: #000;
+    &__header {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 20px 20px auto 20px 20px;
+      font-size: 16px;
+      background: var(--ey-color-primary);
+      padding: 4px 8px;
+      span {
+        text-align: center;
+      }
+    }
+    &__body {
+      padding: 4px;
+      &__month {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__btns {
+          display: flex;
+          gap: 6px;
+        }
+      }
+      &__week {
+        display: flex;
+        gap:4px;
+        padding: 0 4px;
+        &__item {
+          flex: 1;
+          text-align: center;
+          padding: 4px 0;
+          &--active {
+            border-bottom: 2px solid var(--ey-color-primary);
+          }
+        }
+      }
+      &__days {
+        display: grid;
+        grid-column: 7;
+        gap: 4px;
+        padding: 4px;
+        .week-items-wrapper {
+          width: 100%;
+          display: flex;
+          .calendar__item {
+            text-align: center;
+            padding: 7px 0;
+            flex:1;
+            &--disabled {
+              opacity: 0.3;
+              cursor: not-allowed;
+            }
+            &--active {
+              background-color: var(--ey-color-primary);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 4px;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      gap: 8px;
+    }
+  }
+}
