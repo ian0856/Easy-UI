@@ -2,8 +2,7 @@ import { PropType, defineComponent } from "vue";
 import { useVModel } from "@vueuse/core";
 import JSONPreviewProps from "./type";
 import './base.scss';
-import { StringComponent } from "./_components/String";
-import { NumberComponent } from "./_components/Number";
+import { StringComponent, NumberComponent } from "./_components";
 
 export const EyJSONEditor = defineComponent({
   name: 'EyJSONEditor',
